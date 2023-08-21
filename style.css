@@ -1,0 +1,243 @@
+html{
+    scroll-behavior: smooth;
+}
+ul > li{
+    color: white;
+    text-align: left;
+    cursor: pointer;
+}
+ul > li:hover{
+    color: grey;
+}
+h1{
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Kaushan Script', cursive; font-size: 45px;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 60px;
+    text-shadow: 10px 6px 8px rgba(26, 1, 1, 0.849);
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+    cursor: pointer;
+}
+.h-container{
+    background: transparent;
+}
+.center > p{
+    color: white;
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.center{
+    margin-top: 90px;
+    text-align: center;
+    margin-bottom: 150px;
+}
+.center button{
+    animation-name: slideInLeft;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+.center img{
+    animation: bounce;
+    animation-duration: 3s;
+}
+@keyframes bounce {
+    0%,20%,50%,100%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-40px);
+    }
+    60%{
+        transform: translateY(-40px);
+    }
+}
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: changeImage 35s infinite;
+}
+
+@keyframes changeImage {
+    0%, 100% { background-image: url(./public/images/pasta2.jpg); }
+    33.33% { background-image: url(./public/images/pasta1.jpg); }
+    66.66% { background-image: url(./public/images/pasta10.jpg); }
+}
+
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-700px);
+    }
+    to{
+        transform: translateX(0);
+    }   
+}
+@keyframes slideInRight {
+    from {
+        transform: translateX(700px);
+    }
+    to{
+        transform: translateX(0);
+    }   
+}
+.center > p {
+    animation-name: slideInRight;
+    animation-duration: 3s;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 78% 20%;
+    grid-template-rows: 1fr 20px 1fr;
+    background-color: rgb(36, 36, 36);
+    padding: 50px;
+    gap: 2%;
+}
+.three{
+    grid-row: span 3;
+    text-align: right;
+}
+.three > img{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 0;
+    padding-right: 0;
+}
+.three > p{
+    font-size: 15px;
+    font-weight: lighter;
+    color: white;
+    text-align: right;
+    color: grey;
+}
+.two{
+    display: flex;
+}
+.one{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.s-mail{
+    margin-right: 50px;
+    width: 60%;
+}
+.s-mail input{
+    width: 70%;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.s-mail p{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.s-mail label{
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+.s-mail button{
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+}
+.four{
+    display: flex;
+}
+.four > div{
+    margin-right: 20px;
+}
+hr {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.dotted-hr {
+    border-top: 2px dotted goldenrod;
+}
+#contact{
+    margin-left: 100px;
+}
+.q-links a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+.q-links a:hover{
+    color: grey;
+}
+.one img{
+    filter: grayscale(100);
+    transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+.one img:hover {
+    filter: grayscale(0);
+    transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@media (max-width: 900px){
+    .footer{
+        display: block;
+        padding: 20px;
+    }
+    .one{
+        display: block;
+        margin-bottom: 30px;
+    }
+    .two{
+        display: none;
+    }
+    .four{
+        display: block;
+        margin-bottom: 30px;
+    }
+    .s-mail{
+        display: block;
+        margin: 0px;
+        width: 100%;
+    }
+    input{
+        margin-bottom: 20px;
+    }
+    button{
+        margin-bottom: 20px;
+    }
+    .three{
+        display: block;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    .three > p{
+        text-align: left;
+    }
+    .three > img{
+        display: none;
+    }
+    #contact{
+        margin-left: 0px;
+    }
+    h1{
+        font-size: 40px
+    }
+    .center > p{
+        font-size: 15px;
+    }
+    .center > img{
+        width: 200px;
+    }
+    .center{
+        padding: 20px;
+        margin: 20px;
+    }
+    .one img{
+        filter: none;
+        transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        cursor: pointer;
+    }
+}

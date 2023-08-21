@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: url(./images/review-bg.jpg);
+            background-size: cover;
+            backdrop-filter: blur(5px);
+        }
+        ul > li{
+            color: white;
+            text-align: left;
+            cursor: pointer;
+        }
+        @keyframes slideInLeft {
+            from {
+                   transform: translateX(-700px);
+            }
+            to{
+                 transform: translateX(0);
+            }   
+        }
+        @keyframes slideInRight {
+            from {
+                  transform: translateX(700px);
+            }
+            to{
+                 transform: translateX(0);
+            }   
+        }
+        .footer{
+            display: grid;
+            grid-template-columns: 78% 20%;
+            grid-template-rows: 1fr 20px 1fr;
+            background-color: rgb(36, 36, 36);
+            padding: 50px;
+            gap: 2%;
+        }
+        .three{
+            grid-row: span 3;
+            text-align: right;
+        }
+        .three > img{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-right: 0;
+            padding-right: 0;
+        }
+        .three > p{
+            font-size: 15px;
+            font-weight: lighter;
+            color: white;
+        }
+        .two{
+            display: flex;
+        }
+        .one{
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .s-mail{
+            margin-right: 50px;
+            width: 60%;
+        }
+        .s-mail input{
+            width: 70%;
+            margin-right: 30px;
+            cursor: pointer;
+        }
+        .s-mail p{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .s-mail label{
+            font-size: 15px;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+        .s-mail button{
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 20px;
+        }
+        .four{
+            display: flex;
+        }
+        .four > div{
+            margin-right: 20px;
+        }
+        hr {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        .dotted-hr {
+            border-top: 2px dotted goldenrod;
+        }
+        #contact{
+            margin-left: 100px;
+        }
+        .q-links a{
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+        }
+        .q-links a:hover{
+            color: grey;
+        }
+        .one img{
+            filter: grayscale(100);
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+        }
+        .one img:hover {
+            filter: grayscale(0);
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        @media (max-width: 900px){
+          .footer{
+            display: block;
+            padding: 20px;
+          }
+          .one{
+            display: block;
+            margin-bottom: 30px;
+          }
+          .two{
+            display: none;
+          }
+          .four{
+            display: block;
+            margin-bottom: 30px;
+          }
+          .s-mail{
+            display: block;
+            margin: 0px;
+            width: 100%;
+          }
+          input{
+            margin-bottom: 20px;
+          }
+          button{
+            margin-bottom: 20px;
+          }
+          .three{
+            display: block;
+            text-align: left;
+            margin-bottom: 30px;
+          }
+          .three > p{
+            text-align: left;
+          }
+          .three > img{
+            display: none;
+          }
+          #contact{
+            margin-left: 0px;
+          }
+          .one img{
+            filter: none;
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-2 mb-3">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+              <img src="./images/logo-white-gold.png" width="100px" alt="logo" />
+            </a>
+          </div>
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style=" font-family:'Kaushan Script', cursive;">
+            <li><a href="./home.html" class="nav-link px-2 link-light">Home</a></li>
+            <li><a href="./spiceyDeals.html" class="nav-link px-2 link-light">Spicey Deals</a></li>
+            <li><a href="./Menu-list.html" class="nav-link px-2 link-light">Menu List</a></li>
+            <li><a href="./homeDelivery.html" class="nav-link px-2 link-light">Home Deliveries</a></li>
+            <li><a href="./hire.html" class="nav-link px-2 link-light">Hire a Personal Pasta Chef</a></li>
+          </ul>
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-light me-2 disabled" style="border: 2px solid; border-radius: 25px;">Reservations?</button>
+            <a href="tel:9028111613"><button type="button" class="btn btn-outline-light me-2" style="border: 2px solid; border-radius: 25px;">Call</button></a>
+          </div>
+        </header>
+    </div>
+    <div class="">
+      <div class="p-5 text-center text-light">
+        <div class="container">
+          <!-- insert image here -->
+          <h1 class="">Oluwatosin Micheal</h1>
+          <p class="col-lg-8 mx-auto lead">
+            "A pasta lover's haven! Every bite at this restaurant is a burst of authentic flavors. From classic carbonara to unique creations, they nail it all. Friendly staff and cozy ambiance. A culinary delight! 🍝👏 #PastaParadise"
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <div class="p-5 text-center text-light">
+        <div class="container">
+          <!-- insert image here -->
+          <h1 class="">Joseph Ilerioluwa</h1>
+          <p class="col-lg-8 mx-auto lead">
+            "Pasta perfection defined! This restaurant crafts their pasta with utmost artistry. Creamy textures, rich sauces, and impeccable seasoning. You'll be transported straight to Italy with every forkful. 🍝😍 #TopTierTaste"
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <div class="p-5 text-center text-light">
+        <div class="container">
+          <!-- insert image here -->
+          <h1 class="">Paul Adewole</h1>
+          <p class="col-lg-8 mx-auto lead">
+            "An Italian oasis for pasta aficionados! The dedication to quality is evident in every dish. Al dente goodness paired with mouthwatering sauces. Charming atmosphere, attentive service – an absolute must-visit for anyone seeking pasta bliss. 🇮🇹🍝 #PastaGem"          </p>
+        </div>
+      </div>
+    </div>
+    <section class="footer">
+        <div class="one">
+          <div class="s-mail">
+            <P style="color: white;">Straight To Your Inbox</P>
+            <form>
+              <label style="color: white;">News & Update From Pasta Hut</label><br/>
+              <input style="background-color: transparent; border: 0px; border-bottom: 1px solid white;" placeholder="Email Address"><button class="btn btn-outline-light">Subscribe</button>
+            </form>
+          </div>
+          <div>
+            <p style="color: white; font-weight: 500;">Socialise With Us.</p>
+            <div>
+              <a href="#"><img src="./images/facebook.png" width="33px" style="margin-right: 15px;"/></a>
+              <a href="#"><img src="./images/instagram.png" width="33px" style="margin-right: 5px; margin-left: 5px;"/></a>
+              <a href="#"><img src="./images/twitter.png" width="33px" style="margin-left: 20px;"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="three">
+          <img src="./images/logo-white-gold.png" alt="pastahut-logo" width="170px" />
+          <p style="color: grey;">copyright © 2023 Pasta Hut Restaurant. All Right Reserved.</p>
+          <p style="color: grey;">Terms & conditions Apply.</p>
+        </div>
+        <div class="two">
+          <hr class="dotted-hr" style="width: 100%;">
+        </div>
+        <div class="four">
+          <div class="q-links">
+            <a href="./home.html"><p>Home</p></a>
+            <a href="./location.html"><p>Our Location</p></a>
+            <a href="./reservations.html"><p>Make Reservations</p></a>
+          </div>
+          <div class="q-links">
+            <a href="./media.html"><p>Media</p></a>
+            <a href="./spiceyDeals.html"><p>Spicey Deals</p></a>
+            <a href="./reviews.html"><p>Reviews</p></a>
+          </div>
+          <div id="contact">
+            <p style="color: white; font-weight: bold;">Contact Info</p>
+            <p style="color: white; font-weight: lighter;">001, New Pasta Road, Oba Akran Ikeja, Lagos Nigeria.</p>
+            <p style="color: white; font-weight: lighter;"><span style="font-weight: normal;">Phone:</span>+234 902 811 1613</p>
+          </div>
+        </div>
+      </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

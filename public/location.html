@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: url(./images/location-bg.jpeg);
+            background-size: cover;
+            backdrop-filter: blur(5px);
+        }
+        ul > li{
+            color: white;
+            text-align: left;
+            cursor: pointer;
+        }
+        @keyframes slideInLeft {
+            from {
+                   transform: translateX(-700px);
+            }
+            to{
+                 transform: translateX(0);
+            }   
+        }
+        @keyframes slideInRight {
+            from {
+                  transform: translateX(700px);
+            }
+            to{
+                 transform: translateX(0);
+            }   
+        }
+        .footer{
+            display: grid;
+            grid-template-columns: 78% 20%;
+            grid-template-rows: 1fr 20px 1fr;
+            background-color: rgb(36, 36, 36);
+            padding: 50px;
+            gap: 2%;
+        }
+        .three{
+            grid-row: span 3;
+            text-align: right;
+        }
+        .three > img{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-right: 0;
+            padding-right: 0;
+        }
+        .three > p{
+            font-size: 15px;
+            font-weight: lighter;
+            color: white;
+        }
+        .two{
+            display: flex;
+        }
+        .one{
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .s-mail{
+            margin-right: 50px;
+            width: 60%;
+        }
+        .s-mail input{
+            width: 70%;
+            margin-right: 30px;
+            cursor: pointer;
+        }
+        .s-mail p{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .s-mail label{
+            font-size: 15px;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+        .s-mail button{
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 20px;
+        }
+        .four{
+            display: flex;
+        }
+        .four > div{
+            margin-right: 20px;
+        }
+        hr {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        .dotted-hr {
+            border-top: 2px dotted goldenrod;
+        }
+        #contact{
+            margin-left: 100px;
+        }
+        .q-links a{
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+        }
+        .q-links a:hover{
+            color: grey;
+        }
+        .one img{
+            filter: grayscale(100);
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+        }
+        .one img:hover {
+            filter: grayscale(0);
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .elementor-widget-wrap{
+          width: 100%;
+        }
+        iframe{
+          width: 100%;
+        }
+        @media (max-width: 900px){
+          .footer{
+            display: block;
+            padding: 20px;
+          }
+          .one{
+            display: block;
+            margin-bottom: 30px;
+          }
+          .two{
+            display: none;
+          }
+          .four{
+            display: block;
+            margin-bottom: 30px;
+          }
+          .s-mail{
+            display: block;
+            margin: 0px;
+            width: 100%;
+          }
+          input{
+            margin-bottom: 20px;
+          }
+          button{
+            margin-bottom: 20px;
+          }
+          .three{
+            display: block;
+            text-align: left;
+            margin-bottom: 30px;
+          }
+          .three > p{
+            text-align: left;
+          }
+          .three > img{
+            display: none;
+          }
+          #contact{
+            margin-left: 0px;
+          }
+          .one img{
+            filter: none;
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-2 mb-3">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+              <img src="./images/logo-white-gold.png" width="100px" alt="logo" />
+            </a>
+          </div>
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style=" font-family:'Kaushan Script', cursive;">
+            <li><a href="./home.html" class="nav-link px-2 link-light">Home</a></li>
+            <li><a href="./spiceyDeals.html" class="nav-link px-2 link-light">Spicey Deals</a></li>
+            <li><a href="./Menu-list.html" class="nav-link px-2 link-light">Menu List</a></li>
+            <li><a href="./homeDelivery.html" class="nav-link px-2 link-light">Home Deliveries</a></li>
+            <li><a href="./hire.html" class="nav-link px-2 link-light">Hire a Personal Pasta Chef</a></li>
+          </ul>
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-light me-2 disabled" style="border: 2px solid; border-radius: 25px;">Reservations?</button>
+            <a href="tel:9028111613"><button type="button" class="btn btn-outline-light me-2" style="border: 2px solid; border-radius: 25px;">Call</button></a>
+          </div>
+        </header>
+    </div>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto text-light">
+          <h1 class="fw-light py-3">Where To <span style="color: goldenrod;">Dine</span> With <span style="color: goldenrod;">Us</span>.</h1>
+          <p class="lead py-4">Here are all the Available location Where You can find Uss when You craving for a pasta delight, Even Though we can serve You Pasta Delicacies in Your Home.</p>
+        </div>
+      </div>
+    </section>
+    <div class="album py-5 ">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-12c20eb elementor-widget elementor-widget-google_maps" data-id="12c20eb" data-element_type="widget" data-widget_type="google_maps.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-custom-embed">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.9835313996869!2d3.302897358838339!3d6.53000437048656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8fc97ee736a9%3A0x882ef3bdd48e7587!2sJakande%20Estate%2C%20Isolo!5e0!3m2!1sen!2sng!4v1689237074293!5m2!1sen!2sng" loading="lazy"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h2 class="fw-light">Jakande.</h2>
+                <p class="card-text">Block 446 flat 2
+                  Jakande estate,<br />
+                  Isolo, Lagos.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="https://goo.gl/maps/fnadVq6HPefa16GW9">
+                    <button type="button" class="btn btn-sm btn-outline-success">Navigate with G-Map</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-12c20eb elementor-widget elementor-widget-google_maps" data-id="12c20eb" data-element_type="widget" data-widget_type="google_maps.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-custom-embed">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.66741551009!2d3.4174635244353357!3d6.436744674166572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf52acf92730b%3A0xf0e81e008a0d1817!2s20%2F24%20Ozumba%20Mbadiwe%20Ave%2C%20Victoria%20Island%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1691866983699!5m2!1sen!2sng" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h2 class="fw-light">Lagos Island.</h2>
+                <p class="card-text">
+                  20 Ozumba Mbadiwe Ave,<br />
+                  Victoria Island 106104, Lagos.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="https://goo.gl/maps/ojcub28BV1HV9NYSA">
+                    <button type="button" class="btn btn-sm btn-outline-success">Navigate with G-Map</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-12c20eb elementor-widget elementor-widget-google_maps" data-id="12c20eb" data-element_type="widget" data-widget_type="google_maps.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-custom-embed">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15854.342510801904!2d3.3430184516831356!3d6.573864479115472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b92736b7bc1a9%3A0x22e4baaa2b1eeb97!2s2%20Adekunle%20Fajuyi%20Way%2C%20Ikeja%20GRA%20101233%2C%20Lagos!5e0!3m2!1sen!2sng!4v1691867422016!5m2!1sen!2sng" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h2 class="fw-light">Ikeja.</h2>
+                <p class="card-text">2 Adekunle Fajuyi Way,<br/> Ikeja GRA 101233, Lagos.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="https://goo.gl/maps/HcVM2K8mGb6dVkRT8">
+                    <button type="button" class="btn btn-sm btn-outline-success">Navigate with G-Map</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="footer">
+        <div class="one">
+          <div class="s-mail">
+            <P style="color: white;">Straight To Your Inbox</P>
+            <form>
+              <label style="color: white;">News & Update From Pasta Hut</label><br/>
+              <input style="background-color: transparent; border: 0px; border-bottom: 1px solid white;" placeholder="Email Address"><button class="btn btn-outline-light">Subscribe</button>
+            </form>
+          </div>
+          <div>
+            <p style="color: white; font-weight: 500;">Socialise With Us.</p>
+            <div>
+              <a href="#"><img src="./images/facebook.png" width="33px" style="margin-right: 15px;"/></a>
+              <a href="#"><img src="./images/instagram.png" width="33px" style="margin-right: 5px; margin-left: 5px;"/></a>
+              <a href="#"><img src="./images/twitter.png" width="33px" style="margin-left: 20px;"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="three">
+          <img src="./images/logo-white-gold.png" alt="pastahut-logo" width="170px" />
+          <p style="color: grey;">copyright © 2023 Pasta Hut Restaurant. All Right Reserved.</p>
+          <p style="color: grey;">Terms & conditions Apply.</p>
+        </div>
+        <div class="two">
+          <hr class="dotted-hr" style="width: 100%;">
+        </div>
+        <div class="four">
+          <div class="q-links">
+            <a href="./home.html"><p>Home</p></a>
+            <a href="./location.html"><p>Our Location</p></a>
+            <a href="./reservations.html"><p>Make Reservations</p></a>
+          </div>
+          <div class="q-links">
+            <a href="./media.html"><p>Media</p></a>
+            <a href="./spiceyDeals.html"><p>Spicey Deals</p></a>
+            <a href="./reviews.html"><p>Reviews</p></a>
+          </div>
+          <div id="contact">
+            <p style="color: white; font-weight: bold;">Contact Info</p>
+            <p style="color: white; font-weight: lighter;">001, New Pasta Road, Oba Akran Ikeja, Lagos Nigeria.</p>
+            <p style="color: white; font-weight: lighter;"><span style="font-weight: normal;">Phone:</span>+234 902 811 1613</p>
+          </div>
+        </div>
+      </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

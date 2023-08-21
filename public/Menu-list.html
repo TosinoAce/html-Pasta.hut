@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: url(./images/menu-bg3.jpg);
+            background-position: center;
+            background-size: cover;
+            backdrop-filter: blur(5px);
+        }
+        ul > li{
+            color: white;
+            text-align: left;
+            cursor: pointer;
+        }
+        .sd-main{
+            width: 90%;
+            margin-left: 5%;
+        }
+        .s-dish{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .s-dish hr{
+            border-top: 2px solid white;
+        }
+        .sf-dish2{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .s-dish2{
+            display: grid;
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows: 200px 200px;
+            gap: 20px;
+        }
+        .s-dish2 div{
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .s-dish2 div:hover{
+            transform: scale(1.2);
+        }
+        .s-dish2 a{
+            text-decoration: none;
+        }
+        #sTwo{
+            grid-column: span 2;
+            background-image: url(./images/pasta5.jpg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: 1;
+            animation: slideInRight 3s;
+        }
+        #sThree{
+            grid-column: span 2;
+            background-image: url(./images/hot\ pasta.jpeg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: 1;
+            animation: slideInLeft 3s;
+        }
+        #sOne{
+            background-image: url(./images/pasta6.jpg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: 1;
+            animation: slideInLeft 3s;
+        }
+        #sFour{
+            background-image: url(./images/pasta3.jpg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: 1;
+            animation: slideInRight 3s;
+        }
+        .sl-container a{
+            text-decoration: none;
+            color: white;
+        }
+        .sl-container{
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            gap: 60px;
+            color: white;
+            font-family:'Kaushan Script', cursive;
+            padding-bottom: 40px;
+        }
+        .sl-container > div{
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            animation: slideInRight 4s;
+        }
+        .sl-container > div:hover{
+            transform: scale(1.2);
+        }
+        .sl-container hr{
+            border-top: 2px solid goldenrod;
+        }
+        #slTwo{
+            padding: 30px;
+            padding-top: 250px;
+            padding-bottom: 0;
+            background-image: url(./images/chocolate.jpg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: 1;
+            border-radius: 5px;
+        }
+        #slThree{
+            padding: 30px;
+            padding-top: 250px;
+            padding-bottom: 0;
+            background-image: url(./images/pork.jpeg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: 1;
+            border-radius: 5px;
+        }
+        #slOne{
+            padding: 30px;
+            padding-bottom: 0;
+            padding-top: 250px;
+            background-image: url(./images/chicken.jpg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: 1;
+            border-radius: 5px;
+        }
+        .Our-dishes{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            color: white;
+            gap: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .Our-dishes h4{
+            font-family: 'Kaushan Script', cursive;
+        }
+        .Our-dishes > div{
+            padding: 25px;
+            animation: slideInLeft 4s;
+        }
+        .Our-dishes > div > img{
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 1px solid goldenrod;
+            float: right;
+            transition: transform 0.3s ease-in-out;
+        }
+        .Our-dishes > div > img:hover{
+            transform: scale(1.2);
+        }
+        .Our-dishes button{
+            clear: both;
+        }
+        @keyframes slideInLeft {
+            from {
+                   transform: translateX(-700px);
+            }
+            to{
+                 transform: translateX(0);
+            }   
+        }
+        @keyframes slideInRight {
+            from {
+                  transform: translateX(700px);
+            }
+            to{
+                 transform: translateX(0);
+            }   
+        }
+        .footer{
+            display: grid;
+            grid-template-columns: 78% 20%;
+            grid-template-rows: 1fr 20px 1fr;
+            background-color: rgb(36, 36, 36);
+            padding: 50px;
+            gap: 2%;
+        }
+        .three{
+            grid-row: span 3;
+            text-align: right;
+        }
+        .three > img{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-right: 0;
+            padding-right: 0;
+        }
+        .three > p{
+            font-size: 15px;
+            font-weight: lighter;
+            color: white;
+        }
+        .two{
+            display: flex;
+        }
+        .one{
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .s-mail{
+            margin-right: 50px;
+            width: 60%;
+        }
+        .s-mail input{
+            width: 70%;
+            margin-right: 30px;
+            cursor: pointer;
+        }
+        .s-mail p{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .s-mail label{
+            font-size: 15px;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+        .s-mail button{
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 20px;
+        }
+        .four{
+            display: flex;
+        }
+        .four > div{
+            margin-right: 20px;
+        }
+        hr {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        .dotted-hr {
+            border-top: 2px dotted goldenrod;
+        }
+        #contact{
+            margin-left: 100px;
+        }
+        .q-links a{
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+        }
+        .q-links a:hover{
+            color: grey;
+        }
+        .btn_primary { 
+            display: inline-block;
+            text-transform: capitalize;
+            background: var(--btn-bg);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .btn_primary > * {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            transition: all 0.2s;
+        }
+        .in_visible {
+            position: absolute;
+            padding: 0.25rem 0;
+            left: 0;
+            top: -100%;
+        }
+        .btn_primary:hover .visible {
+            transform: translateY(100%);
+        }
+        .btn_primary:hover .in_visible {
+            top: 0;
+        }
+        .btn_primary:focus {
+            outline: none;
+            box-shadow: 0 0 1rem var(--btn-shadow);
+        }
+        .one img{
+            filter: grayscale(100);
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+        }
+        .one img:hover {
+            filter: grayscale(0);
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .Our-dishes .line{
+            border: 1px dotted grey;
+        }
+        .line > div{
+            text-align: left;
+        }
+        
+        .Order{
+            margin-left: 50%;
+        }
+        .sd-main{
+            margin-bottom: 50px;
+        }
+        @media (max-width: 950px){
+          .footer{
+            display: block;
+            padding: 20px;
+          }
+          .one{
+            display: block;
+            margin-bottom: 30px;
+          }
+          .two{
+            display: none;
+          }
+          .four{
+            display: block;
+            margin-bottom: 30px;
+          }
+          .s-mail{
+            display: block;
+            margin: 0px;
+            width: 100%;
+          }
+          input{
+            margin-bottom: 20px;
+          }
+          button{
+            margin-bottom: 20px;
+          }
+          .three{
+            display: block;
+            text-align: left;
+            margin-bottom: 30px;
+          }
+          .three > p{
+            text-align: left;
+          }
+          .three > img{
+            display: none;
+          }
+          #contact{
+            margin-left: 0px;
+          }
+          .s-dish2{
+            display: block;
+            padding: 0px;
+            margin: 0px;
+          }
+          .sf-dish2{
+            display: block;
+          }
+          .Our-dishes{
+            display: block;
+            margin-bottom: 0px;
+            margin-top: 0px;
+          }
+          .Our-dishes > div > img{
+            height: 100px;
+            width: 100px;
+          }
+          .line > div{
+            text-align: right;
+          }
+          .Order{
+            margin-left: 60%;
+          }
+          .line > div img{
+            display: none;
+          }
+        }
+        @media (max-width: 1050px){
+            .line > div img{
+            display: none;
+          }
+          .Our-dishes > div > img{
+            height: 100px;
+            width: 100px;
+          }
+          .Order{
+            margin-left: 60%;
+          }
+          .sl-container{
+            display: block;
+            margin-bottom: 20px;
+          }
+          #slOne{
+            padding: 10px;
+            padding-bottom: 0;
+            padding-top: 20px;
+            margin-bottom: 10px;
+            background-image: url(./images/chicken.jpg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: 1;
+            border-radius: 5px;
+          }
+          #slTwo{
+            padding: 10px;
+            padding-bottom: 0;
+            padding-top: 20px;
+            margin-bottom: 10px;
+            background-image: url(./images/chocolate.jpg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: 1;
+            border-radius: 5px;
+          }
+          #slThree{
+            padding: 10px;
+            padding-bottom: 0;
+            padding-top: 20px;
+            margin-bottom: 10px;
+            background-image: url(./images/pork.jpeg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: 1;
+            border-radius: 5px;
+          }
+          .one img{
+            filter: none;
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-2 mb-3">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+              <img src="./images/logo-white-gold.png" width="100px" alt="logo" />
+            </a>
+          </div>
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style=" font-family:'Kaushan Script', cursive;">
+            <li><a href="./home.html" class="nav-link px-2 link-light">Home</a></li>
+            <li><a href="./spiceyDeals.html" class="nav-link px-2 link-light">Spicey Deals</a></li>
+            <li><a href="./Menu-list.html" class="nav-link px-2 link-light">Menu List</a></li>
+            <li><a href="./homeDelivery.html" class="nav-link px-2 link-light">Home Deliveries</a></li>
+            <li><a href="./hire.html" class="nav-link px-2 link-light">Hire a Personal Pasta Chef</a></li>
+          </ul>
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-light me-2 disabled" style="border: 2px solid; border-radius: 25px;">Reservations?</button>
+            <a href="tel:9028111613"><button type="button" class="btn btn-outline-light me-2" style="border: 2px solid; border-radius: 25px;">Call</button></a>
+          </div>
+        </header>
+    </div>
+    <section class="sd-main">
+        <div class="s-dish">
+            <div style="width: 30%;">
+                <hr />
+             </div>
+            <div style="width: 40%;">
+                <h2 style="text-align: center; font-family: 'Great Vibes', cursive; color: white;"> Chef 's Weekly Special Dish </h2>
+            </div>
+            <div style="width: 30%;">
+                <hr />
+             </div>
+        </div>
+        <div class="sf-dish2">
+            <div class="s-dish2">
+                <div id="sOne">
+                    <a href="#">
+                        <h2 style=" padding: 30px; text-shadow: 2px 2px rgb(54, 54, 54); color: white; font-family:'Kaushan Script', cursive;">Thailand <br />Seafood pasta</h2>
+                        <p style="color: white; font-family: 'Vina Sans', cursive; font-size: 25px; text-align: right; padding-right: 30px;">$113.10</p>
+                    </a>
+                </div>
+                <div id="sTwo">
+                    <a href="#">
+                        <h2 style=" padding: 30px; text-shadow: 2px 2px rgb(54, 54, 54);  color: white; font-family:'Kaushan Script', cursive;">Creamy Carbonara <br />Sausage pasta</h2>
+                        <p style="color: white; font-family: 'Vina Sans', cursive; font-size: 25px; text-align: right; padding-right: 30px;">$85.24</p>
+                    </a>
+                </div>
+                <div id="sThree">
+                    <a href="#">
+                        <h2 style=" padding: 30px; text-shadow: 2px 2px rgb(54, 54, 54);  color: white; font-family:'Kaushan Script', cursive;">Speedy Spicy Chicken <br /> & Bacon pasta</h2>
+                        <p style="color: white; font-family: 'Vina Sans', cursive; font-size: 25px; text-align: right; padding-right: 30px;">$73.14</p>
+                    </a>
+                </div>
+                <div id="sFour">
+                    <a href="#">
+                        <h2 style=" padding: 30px; text-shadow: 2px 2px rgb(54, 54, 54);  color: white; font-family:'Kaushan Script', cursive;">Fruit-Salad<br /> Italian pasta</h2>
+                        <p style="color: white; font-family: 'Vina Sans', cursive; font-size: 25px; text-align: right; padding-right: 30px;">$78.60</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="s-dish" style="margin-top: 40px;">
+            <div style="width: 30%;">
+                <hr />
+             </div>
+            <div style="width: 40%;">
+                <h2 style="text-align: center; font-family: 'Great Vibes', cursive; color: white;"> Side Dishes </h2>
+            </div>
+            <div style="width: 30%;">
+                <hr />
+             </div>
+        </div>
+        <div class="sf-dish2">
+            <div class="sl-container">
+                <div id="slOne">
+                    <a href="#"><p>Grilled Chicken</p></a>
+                    <div style="width: 30px;">
+                        <hr />
+                    </div>
+                    <p style="color: goldenrod; font-family: 'Vina Sans', cursive; font-size: 25px; margin: 0; padding: 0; padding-bottom: 20px;">$43</p>
+                </div>
+                <div id="slTwo">
+                    <a href="#"><p>Chocolate Lava</p></a>
+                    <div style="width: 30px;">
+                        <hr />
+                    </div>
+                    <p style="color: goldenrod; font-family: 'Vina Sans', cursive; font-size: 25px; margin: 0; padding: 0; padding-bottom: 20px;">$12</p>
+                </div>
+                <div id="slThree">
+                    <a href="#"><p>Grilled Pork</p></a>
+                    <div style="width: 30px;">
+                        <hr />
+                    </div>
+                    <p style="color: goldenrod; font-family: 'Vina Sans', cursive; font-size: 25px; margin: 0; padding: 0; padding-bottom: 20px;">$65</p>
+                </div>
+            </div>
+        </div>
+        <div class="s-dish" style="margin-top: 10px; margin-bottom: 30px;">
+            <div style="width: 30%;">
+                <hr />
+             </div>
+            <div style="width: 40%;">
+                <h2 style="text-align: center; font-family: 'Great Vibes', cursive; color: white;"> Main Dishes </h2>
+            </div>
+            <div style="width: 30%;">
+                <hr />
+             </div>
+        </div>
+        <div class="Our-dishes">
+            <div class="line">
+                <img src="./images/spaghetti-with-grilled-mackerel.webp" alt="spaghetti-with-grilled-mackerel"/>
+                <h4>Spaghetti With Grilled Mackerel</h4>
+                <p style="color: goldenrod; font-family: 'Vina Sans', cursive; font-size: 25px; margin: 0; padding: 0;">$50.00</p>
+                <p style="font-weight: lighter; font-size: small;">Savor grilled mackerel's smoky richness atop al dente spaghetti, a delectable fusion of oceanic delight and pasta perfection.</p>
+                <div><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-half.svg"/><a href="./checkout.html"><button class="btn btn-outline-light btn_primary Order"><span class="visible">Order</span><span class="in_visible">Now</span></button></a></div>
+            </div>
+            <div class="line">
+                <img src="./images/Fajita-pasta.webp" alt="Fajita-pasta" />
+                <h4>Fajita Style Pasta</h4>
+                <p style="color: goldenrod; font-family: 'Vina Sans', cursive; font-size: 25px; margin: 0; padding: 0;">$63.10</p>
+                <p style="font-weight: lighter; font-size: small;">Take the aromatic flavours of a classic Mexican fajita and combine with pasta for this easy, vibrant meal. It's an ideal Friday night dinner</p>
+                <div><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-half.svg"/><a href="./checkout.html"><button class="btn btn-outline-light btn_primary Order"><span class="visible">Order</span><span class="in_visible">Now</span></button></a></div>
+            </div>
+            <div class="line">
+                <img src="./images/Chicken-and-bacon-pasta.webp"  alt="Chicken-and-bacon-pasta"/>
+                <h4>Chicken And Bacon Pasta</h4>
+                <p style="color: goldenrod; font-family: 'Vina Sans', cursive; font-size: 25px; margin: 0; padding: 0;">$75.15</p>
+                <p style="font-weight: lighter; font-size: small;">chicken and bacon with ribbons of tagliatelle in a deliciously creamy sauce used to make this Pasta dish. Served with a green salad for an easy supper</p>
+                <div><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-half.svg"/><a href="./checkout.html"><button class="btn btn-outline-light btn_primary Order"><span class="visible">Order</span><span class="in_visible">Now</span></button></a></div>
+            </div>
+        </div>
+        <div class="Our-dishes">
+            <div class="line">
+                <img src="./images/broccoli.jpg" alt="broccoli"/>
+                <h4>Cheesy Broccoli Pasta Bake </h4>
+                <p style="color: goldenrod; font-family: 'Vina Sans', cursive; font-size: 25px; margin: 0; padding: 0;">$85.30</p>
+                <p style="font-weight: lighter; font-size: small;">Indulge in a delightful fusion of flavors with our Cheesy Broccoli Pasta Bake – a comforting blend of tender pasta, vibrant broccoli, and ooey-gooey cheese.</p>
+                <div><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-half.svg"/><a href="./checkout.html"><button class="btn btn-outline-light btn_primary Order"><span class="visible">Order</span><span class="in_visible">Now</span></button></a></div>
+            </div>
+            <div class="line">
+                <img src="./images/italian-style-sausage-pasta.jpg" alt="italian-style-sausage-pasta" />
+                <h4>Italian Style Sausage Pasta</h4>
+                <p style="color: goldenrod; font-family: 'Vina Sans', cursive; font-size: 25px; margin: 0; padding: 0;">$73.15</p>
+                <p style="font-weight: lighter; font-size: small;">Indulge in the rich flavors of Italian-style sausage pasta, where savory sausages harmonize with al dente pasta in a delectable tomato and herb sauce.</p>
+                <div><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-half.svg"/><a href="./checkout.html"><button class="btn btn-outline-light btn_primary Order"><span class="visible">Order</span><span class="in_visible">Now</span></button></a></div>
+            </div>
+            <div class="line">
+                <img src="./images/pasta-alfredo.jpeg"  alt="pasta-alfredo"/>
+                <h4>Chicken Pasta Alfredo</h4>
+                <p style="color: goldenrod; font-family: 'Vina Sans', cursive; font-size: 25px; margin: 0; padding: 0;">$54.25</p>
+                <p style="font-weight: lighter; font-size: small;">Creamy fettuccine Alfredo: Silky pasta blanketed in rich Parmesan cream sauce, a timeless indulgence that captivates every palate, slurpy and delicious.</p>
+                <div ><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-fill.svg" /><img src="./images/star-half.svg"/><a href="./checkout.html"><button class="btn btn-outline-light btn_primary Order"><span class="visible">Order</span><span class="in_visible">Now</span></button></a></div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="one">
+          <div class="s-mail">
+            <P style="color: white;">Straight To Your Inbox</P>
+            <form>
+              <label style="color: white;">News & Update From Pasta Hut</label><br/>
+              <input style="background-color: transparent; border: 0px; border-bottom: 1px solid white;" placeholder="Email Address"><button class="btn btn-outline-light">Subscribe</button>
+            </form>
+          </div>
+          <div>
+            <p style="color: white; font-weight: 500;">Socialise With Us.</p>
+            <div>
+              <a href="#"><img src="./images/facebook.png" width="33px" style="margin-right: 15px;"/></a>
+              <a href="#"><img src="./images/instagram.png" width="33px" style="margin-right: 5px; margin-left: 5px;"/></a>
+              <a href="#"><img src="./images/twitter.png" width="33px" style="margin-left: 20px;"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="three">
+          <img src="./images/logo-white-gold.png" alt="pastahut-logo" width="170px" />
+          <p style="color: grey;">copyright © 2023 Pasta Hut Restaurant. All Right Reserved.</p>
+          <p style="color: grey;">Terms & conditions Apply.</p>
+        </div>
+        <div class="two">
+          <hr class="dotted-hr" style="width: 100%;">
+        </div>
+        <div class="four">
+          <div class="q-links">
+            <a href="./home.html"><p>Home</p></a>
+            <a href="./location.html"><p>Our Location</p></a>
+            <a href="./reservations.html"><p>Make Reservations</p></a>
+          </div>
+          <div class="q-links">
+            <a href="./media.html"><p>Media</p></a>
+            <a href="./spiceyDeals.html"><p>Spicey Deals</p></a>
+            <a href="./reviews.html"><p>Reviews</p></a>
+          </div>
+          <div id="contact">
+            <p style="color: white; font-weight: bold;">Contact Info</p>
+            <p style="color: white; font-weight: lighter;">001, New Pasta Road, Oba Akran Ikeja, Lagos Nigeria.</p>
+            <p style="color: white; font-weight: lighter;"><span style="font-weight: normal;">Phone:</span>+234 902 811 1613</p>
+          </div>
+        </div>
+      </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

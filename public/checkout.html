@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
+    <style>
+         body{
+            background-image: url(./images/homedelivery-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            backdrop-filter: blur(5px);
+        }
+        ul > li{
+            color: white;
+            text-align: left;
+            cursor: pointer;
+        }
+        .footer{
+            display: grid;
+            grid-template-columns: 78% 20%;
+            grid-template-rows: 1fr 20px 1fr;
+            background-color: rgb(36, 36, 36);
+            padding: 50px;
+            gap: 2%;
+        }
+        .three{
+            grid-row: span 3;
+            text-align: right;
+        }
+        .three > img{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-right: 0;
+            padding-right: 0;
+        }
+        .three > p{
+            font-size: 15px;
+            font-weight: lighter;
+            color: white;
+        }
+        .two{
+            display: flex;
+        }
+        .one{
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .s-mail{
+            margin-right: 50px;
+            width: 60%;
+        }
+        .s-mail input{
+            width: 70%;
+            margin-right: 30px;
+            cursor: pointer;
+        }
+        .s-mail p{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .s-mail label{
+            font-size: 15px;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+        .s-mail button{
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 20px;
+        }
+        .four{
+            display: flex;
+        }
+        .four > div{
+            margin-right: 20px;
+        }
+        hr {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        .dotted-hr {
+            border-top: 2px dotted goldenrod;
+        }
+        #contact{
+            margin-left: 100px;
+        }
+        .q-links a{
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+        }
+        .q-links a:hover{
+            color: grey;
+        }
+        .one img{
+            filter: grayscale(100);
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+        }
+        .one img:hover {
+            filter: grayscale(0);
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        @media (max-width: 950px){
+          .footer{
+            display: block;
+            padding: 20px;
+          }
+          .one{
+            display: block;
+            margin-bottom: 30px;
+          }
+          .two{
+            display: none;
+          }
+          .four{
+            display: block;
+            margin-bottom: 30px;
+          }
+          .s-mail{
+            display: block;
+            margin: 0px;
+            width: 100%;
+          }
+          input{
+            margin-bottom: 20px;
+          }
+          button{
+            margin-bottom: 20px;
+          }
+          .three{
+            display: block;
+            text-align: left;
+            margin-bottom: 30px;
+          }
+          .three > p{
+            text-align: left;
+          }
+          .three > img{
+            display: none;
+          }
+          #contact{
+            margin-left: 0px;
+          }
+          .one img{
+            filter: none;
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-2 mb-3">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+              <img src="./images/logo-white-gold.png" width="100px" alt="logo" />
+            </a>
+          </div>
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style=" font-family:'Kaushan Script', cursive;">
+            <li><a href="./home.html" class="nav-link px-2 link-light">Home</a></li>
+            <li><a href="./spiceyDeals.html" class="nav-link px-2 link-light">Spicey Deals</a></li>
+            <li><a href="./Menu-list.html" class="nav-link px-2 link-light">Menu List</a></li>
+            <li><a href="./homeDelivery.html" class="nav-link px-2 link-light">Home Deliveries</a></li>
+            <li><a href="./hire.html" class="nav-link px-2 link-light">Hire a Personal Pasta Chef</a></li>
+          </ul>
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-light me-2 disabled" style="border: 2px solid; border-radius: 25px;">Reservations?</button>
+            <a href="tel:9028111613"><button type="button" class="btn btn-outline-light me-2" style="border: 2px solid; border-radius: 25px;">Call</button></a>
+          </div>
+        </header>
+    </div>
+    <div class="container mb-5">
+        <main>
+          <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="./images/logo-white-gold.png" alt="" width="92" height="57">
+            <h2 class="text-light">Checkout form</h2>
+            <p class="lead text-light">Our user-friendly checkout form ensures a seamless ordering experience. Select your preferred Pasta dish. Review your choices, add any special instructions, and proceed to secure payment. Your Pasta masterpiece will soon be on its way, crafted just the way you love it. Bon appétit!.</p>
+          </div>
+      
+          <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-warning">Your Pasta Order</span>
+                <span class="badge bg-warning rounded-pill">3</span>
+              </h4>
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Chicken Pasta Alfredo</h6>
+                    <small class="text-body-secondary">Delicious Pasta and Crunchy Chicken</small>
+                  </div>
+                  <span class="text-body-secondary">$54.25</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Fajitu Style Pasta</h6>
+                    <small class="text-body-secondary"> A classic Mexican fajita combined with pasta</small>
+                  </div>
+                  <span class="text-body-secondary">$63.10</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Chicken and Bacon Pasta</h6>
+                    <small class="text-body-secondary">Chicken and Bacon with ribbons of tagliatelle in a deliciously creamy sauce used to make this Pasta dish</small>
+                  </div>
+                  <span class="text-body-secondary">$75.15</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                  <div class="text-primary">
+                    <h6 class="my-0">Promo code</h6>
+                    <small>EXAMPLECODE</small>
+                  </div>
+                  <span class="text-primary">−$5</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>Total (USD)</span>
+                  <strong>$187.5</strong>
+                </li>
+              </ul>
+      
+              <form class="card p-2">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Promo code">
+                  <button type="submit" class="btn btn-success">Redeem</button>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-7 col-lg-8">
+              <h4 class="mb-3">Billing & address</h4>
+              <form class="needs-validation" novalidate="">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+                  </div>
+      
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="address2" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="address2" placeholder="+2348033489909">
+                  </div>
+                  
+                  <div class="col-12">
+                    <label for="address" class="form-label">Delivery Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+
+                  <div class="col-md-5">
+                    <label for="country" class="form-label">Local Government Area</label>
+                    <select class="form-select" id="country" required="">
+                      <option value="">Choose...</option>
+                      <option>Agege</option>
+                      <option>Ajeromi-Ifelodun</option>
+                      <option>Alimosho</option>
+                      <option>Amuwo-Odofin</option>
+                      <option>Apapa</option>
+                      <option>Badagry</option>
+                      <option>Epe</option>
+                      <option>Eti-Osa</option>
+                      <option>Ibeju-Lekki</option>
+                      <option>Ifako-Ijaiye</option>
+                      <option>Ikeja</option>
+                      <option>Ikorodu</option>
+                      <option>Kosofe</option>
+                      <option>Lagos Island</option>
+                      <option>Lagos Mainland</option>
+                      <option>Mushin</option>
+                      <option>Ojo</option>
+                      <option>Oshodi-Isolo</option>
+                      <option>Somolu</option>
+                      <option>Surulere</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="Special Instructions" class="form-label">Special Instructions</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                  </div>
+                </div>
+      
+                <hr class="my-2">
+      
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="save-info">
+                  <label class="form-check-label" for="save-info">Save this information for next time</label>
+                </div>
+      
+                <hr class="my-2">
+      
+                <h4 class="mb-3">Payment</h4>
+      
+                <div class="my-3">
+                  <div class="form-check">
+                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+                    <label class="form-check-label" for="credit">Credit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+                    <label class="form-check-label" for="debit">Debit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+                    <label class="form-check-label" for="paypal">PayPal</label>
+                  </div>
+                </div>
+      
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label for="cc-name" class="form-label">Name on card</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                    <small class="text-body-secondary">Full name as displayed on card</small>
+                    <div class="invalid-feedback">
+                      Name on card is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-6">
+                    <label for="cc-number" class="form-label">Credit card number</label>
+                    <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Credit card number is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-expiration" class="form-label">Expiration</label>
+                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Expiration date required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-cvv" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Security code required
+                    </div>
+                  </div>
+                </div>
+      
+                <hr class="my-4">
+      
+                <button class="w-100 btn btn-dark btn-lg" type="submit">Continue to checkout</button>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+    <section class="footer">
+        <div class="one">
+          <div class="s-mail">
+            <P style="color: white;">Straight To Your Inbox</P>
+            <form>
+              <label style="color: white;">News & Update From Pasta Hut</label><br/>
+              <input style="background-color: transparent; border: 0px; border-bottom: 1px solid white;" placeholder="Email Address"><button class="btn btn-outline-light">Subscribe</button>
+            </form>
+          </div>
+          <div>
+            <p style="color: white; font-weight: 500;">Socialise With Us.</p>
+            <div>
+              <a href="#"><img src="./images/facebook.png" width="33px" style="margin-right: 15px;"/></a>
+              <a href="#"><img src="./images/instagram.png" width="33px" style="margin-right: 5px; margin-left: 5px;"/></a>
+              <a href="#"><img src="./images/twitter.png" width="33px" style="margin-left: 20px;"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="three">
+          <img src="./images/logo-white-gold.png" alt="pastahut-logo" width="170px" />
+          <p style="color: grey;">copyright © 2023 Pasta Hut Restaurant. All Right Reserved.</p>
+          <p style="color: grey;">Terms & conditions Apply.</p>
+        </div>
+        <div class="two">
+          <hr class="dotted-hr" style="width: 100%;">
+        </div>
+        <div class="four">
+          <div class="q-links">
+            <a href="./home.html"><p>Home</p></a>
+            <a href="./location.html"><p>Our Location</p></a>
+            <a href="./reservations.html"><p>Make Reservations</p></a>
+          </div>
+          <div class="q-links">
+            <a href="./media.html"><p>Media</p></a>
+            <a href="./spiceyDeals.html"><p>Spicey Deals</p></a>
+            <a href="./reviews.html"><p>Reviews</p></a>
+          </div>
+          <div id="contact">
+            <p style="color: white; font-weight: bold;">Contact Info</p>
+            <p style="color: white; font-weight: lighter;">001, New Pasta Road, Oba Akran Ikeja, Lagos Nigeria.</p>
+            <p style="color: white; font-weight: lighter;"><span style="font-weight: normal;">Phone:</span>+234 902 811 1613</p>
+          </div>
+        </div>
+      </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

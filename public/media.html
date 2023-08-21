@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: url(./images/media-bg.jpeg);
+            background-size: cover;
+            backdrop-filter: blur(5px);
+        }
+        ul > li{
+            color: white;
+            text-align: left;
+            cursor: pointer;
+        }
+        .footer{
+            display: grid;
+            grid-template-columns: 78% 20%;
+            grid-template-rows: 1fr 20px 1fr;
+            background-color: rgb(36, 36, 36);
+            padding: 50px;
+            gap: 2%;
+        }
+        .three{
+            grid-row: span 3;
+            text-align: right;
+        }
+        .three > img{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-right: 0;
+            padding-right: 0;
+        }
+        .three > p{
+            font-size: 15px;
+            font-weight: lighter;
+            color: white;
+        }
+        .two{
+            display: flex;
+        }
+        .one{
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .s-mail{
+            margin-right: 50px;
+            width: 60%;
+        }
+        .s-mail input{
+            width: 70%;
+            margin-right: 30px;
+            cursor: pointer;
+        }
+        .s-mail p{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .s-mail label{
+            font-size: 15px;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+        .s-mail button{
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 20px;
+        }
+        .four{
+            display: flex;
+        }
+        .four > div{
+            margin-right: 20px;
+        }
+        hr {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        .dotted-hr {
+            border-top: 2px dotted goldenrod;
+        }
+        #contact{
+            margin-left: 100px;
+        }
+        .q-links a{
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+        }
+        .q-links a:hover{
+            color: grey;
+        }
+        .one img{
+            filter: grayscale(100);
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+        }
+        .one img:hover {
+            filter: grayscale(0);
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        a{
+          text-decoration: none;
+        }
+        @media (max-width: 900px){
+          .footer{
+            display: block;
+            padding: 20px;
+          }
+          .one{
+            display: block;
+            margin-bottom: 30px;
+          }
+          .two{
+            display: none;
+          }
+          .four{
+            display: block;
+            margin-bottom: 30px;
+          }
+          .s-mail{
+            display: block;
+            margin: 0px;
+            width: 100%;
+          }
+          input{
+            margin-bottom: 20px;
+          }
+          button{
+            margin-bottom: 20px;
+          }
+          .three{
+            display: block;
+            text-align: left;
+            margin-bottom: 30px;
+          }
+          .three > p{
+            text-align: left;
+          }
+          .three > img{
+            display: none;
+          }
+          #contact{
+            margin-left: 0px;
+          }
+          .bd-placeholder-img{
+            width: 30%;
+          }
+          .one img{
+            filter: none;
+            transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+          }
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-2 mb-3">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+              <img src="./images/logo-white-gold.png" width="100px" alt="logo" />
+            </a>
+          </div>
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style=" font-family:'Kaushan Script', cursive;">
+            <li><a href="./home.html" class="nav-link px-2 link-light">Home</a></li>
+            <li><a href="./spiceyDeals.html" class="nav-link px-2 link-light">Spicey Deals</a></li>
+            <li><a href="./Menu-list.html" class="nav-link px-2 link-light">Menu List</a></li>
+            <li><a href="./homeDelivery.html" class="nav-link px-2 link-light">Home Deliveries</a></li>
+            <li><a href="./hire.html" class="nav-link px-2 link-light">Hire a Personal Pasta Chef</a></li>
+          </ul>
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-light me-2 disabled" style="border: 2px solid; border-radius: 25px;">Reservations?</button>
+            <a href="tel:9028111613"><button type="button" class="btn btn-outline-light me-2" style="border: 2px solid; border-radius: 25px;">Call</button></a>
+          </div>
+        </header>
+    </div>
+    <main class="container text-light">
+        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-image: url(./images/annual4.jpg); background-size: cover;">
+          <div class="col-lg-6 px-0 text-light">
+            <h1 class="display-4 fst-italic"><span style="color: goldenrod;">Pasta Hut</span> Weekly Recipe Article.</h1>
+            <p class="lead my-3">Check out our weekly carefully curated pasta recipe release to to learn and also try at home with your family while having a good time.</p>
+            <p class="lead mb-0"><a href="#" class=" fw-bold" style="text-decoration: none; color: white;">Continue reading...</a></p>
+          </div>
+        </div>
+      
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+                <h3 class="mb-0">Under-Construction</h3>
+                <div class="mb-1 text-body-secondary">Nov 12</div>
+                <p class="card-text mb-auto">Update on our branch Restaurant Construction See how ready We are to serve You.</p>
+                <a href="#" class="text-light gap-1" >
+                  View
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img src="./images/construction2.jpg" alt="construction image" width="200" height="250" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success-emphasis">Promo</strong>
+                <h3 class="mb-0">Weekly specials.</h3>
+                <div class="mb-1 text-body-secondary">Nov 11</div>
+                <p class="mb-auto">Check out the  deals that are available this week and see how you can maximize and enjoy this offers.</p>
+                <a href="#" class="text-light gap-1">
+                  View
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img src="./images/promo.jpg" alt="construction image" width="200" height="250" />
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row g-5">
+          <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+              From the <span style="color: goldenrod;">Pasta Hut</span>
+            </h3>
+      
+            <article class="blog-post">
+              <h2 class="display-5 link-body-emphasis mb-2 text-light">Annual Pasta Report </h2>
+              <p class="blog-post-meta">August, 20 2021.</p>
+              <p>A Brief Highlight Of Our Beautiful Years With You.</p>
+              <hr>
+              <img src="./images/annual6.webp" width="70%" style="border: 1px solid white; border-radius: 3px; margin-bottom: 20px;"/>
+              <!-- insert Images here -->
+              <p>
+                A whole lot of Memories we have shared together and it has been a very fun and loving one.
+                This previous year we have had 7 different Marriage proposal happened at our Restaurant, 
+                Numerous Birthdays have been celebrated we can't even keep count. This year has been so full of blessings a we
+                also opened three new branches in Lagos Nigeria and we are also looking to expand our operatons to other states in Nigeria.
+                we are looking Forward to a More prospperous Next Year!.
+              </p>
+              <h2><span style="color: goldenrod;">Pasta Hut</span> Out-reach.</h2>
+              <p>This is Pasta-hut's way of Giving Back to the Society.</p>
+              <!-- insert Images Here -->
+              <img src="./images/annual.webp" width="40%" style="border: 1px solid white; border-radius: 3px; margin-bottom: 20px;"/>
+              <img src="./images/annual2.jpg" width="30%" style="border: 1px solid white; border-radius: 3px; margin-bottom: 20px;"/>
+              <img src="./images/annual3.jpg" width="30%" style="border: 1px solid white; border-radius: 3px; margin-bottom: 20px;"/>
+              <img src="./images/annual5.jpg" width="40%" style="border: 1px solid white; border-radius: 3px; margin-bottom: 20px;"/>
+              <p>Our Annual Pasta Out-reach Was A huge succes and anxiously looking forward to next years Out-reach.</p>
+              </article>
+          </div>
+      
+          <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+              <div class="p-4 mb-3 bg-dark rounded">
+                <h4 class="fst-italic">About</h4>
+                <p class="mb-0">We at Pasta Hut Specialize in Bringing Your Pasta dream to life because why not, All recipes are carefully curated by Our Executive Chef for Sweet and Savour perfection.</p>
+              </div>
+      
+              <div>
+                <h4 class="fst-italic text-dark">Previous Recipe Articles</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                      <img src="./images/pasta7.webp" class="bd-placeholder-img" width="100%" height="96" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" />
+                      <div class="col-lg-8">
+                        <h6 class="mb-0">African Native Pasta dish.</h6>
+                        <small class="text-body-secondary">April 25, 2022</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                      <img src="./images/pasta-alfredo.jpeg" class="bd-placeholder-img" width="100%" height="96" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" />
+                      <div class="col-lg-8">
+                        <h6 class="mb-0">Pasta Alferdo.</h6>
+                        <small class="text-body-secondary">January 14, 2021</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                      <img src="./images/pasta6.jpg" class="bd-placeholder-img" width="100%" height="96" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" />
+                      <div class="col-lg-8">
+                        <h6 class="mb-0">Chinese Sea-food Pasta.</h6>
+                        <small class="text-body-secondary">January 13, 2020</small>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <section class="footer">
+        <div class="one">
+          <div class="s-mail">
+            <P style="color: white;">Straight To Your Inbox</P>
+            <form>
+              <label style="color: white;">News & Update From Pasta Hut</label><br/>
+              <input style="background-color: transparent; border: 0px; border-bottom: 1px solid white;" placeholder="Email Address"><button class="btn btn-outline-light">Subscribe</button>
+            </form>
+          </div>
+          <div>
+            <p style="color: white; font-weight: 500;">Socialise With Us.</p>
+            <div>
+              <a href="#"><img src="./images/facebook.png" width="33px" style="margin-right: 15px;"/></a>
+              <a href="#"><img src="./images/instagram.png" width="33px" style="margin-right: 5px; margin-left: 5px;"/></a>
+              <a href="#"><img src="./images/twitter.png" width="33px" style="margin-left: 20px;"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="three">
+          <img src="./images/logo-white-gold.png" alt="pastahut-logo" width="170px" />
+          <p style="color: grey;">copyright © 2023 Pasta Hut Restaurant. All Right Reserved.</p>
+          <p style="color: grey;">Terms & conditions Apply.</p>
+        </div>
+        <div class="two">
+          <hr class="dotted-hr" style="width: 100%;">
+        </div>
+        <div class="four">
+          <div class="q-links">
+            <a href="./home.html"><p>Home</p></a>
+            <a href="./location.html"><p>Our Location</p></a>
+            <a href="./reservations.html"><p>Make Reservations</p></a>
+          </div>
+          <div class="q-links">
+            <a href="./media.html"><p>Media</p></a>
+            <a href="./spiceyDeals.html"><p>Spicey Deals</p></a>
+            <a href="./reviews.html"><p>Reviews</p></a>
+          </div>
+          <div id="contact">
+            <p style="color: white; font-weight: bold;">Contact Info</p>
+            <p style="color: white; font-weight: lighter;">001, New Pasta Road, Oba Akran Ikeja, Lagos Nigeria.</p>
+            <p style="color: white; font-weight: lighter;"><span style="font-weight: normal;">Phone:</span>+234 902 811 1613</p>
+          </div>
+        </div>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
